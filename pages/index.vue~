@@ -1,0 +1,12 @@
+<template>
+ <drsum width="3" height="3"></drsum>
+</template>
+
+<script>
+import drsum from "~/components/drsum.vue"
+export default {
+  components: {
+   drsum
+  }
+}
+</script>

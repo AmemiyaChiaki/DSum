@@ -1,0 +1,20 @@
+import firebase from '~/plugins/firebase.js'
+export const state=()=>({
+    isMouseDown:false
+})
+
+export const mutations={
+    dragStart(state){
+	state.isMouseDown=true
+    }
+}
+
+export const actions={
+    login({commit,dispatch}){
+	const provider = new firebase.auth.GoogleAuthProvider();
+	firebase.auth().signInWithPopup(provider).then(function(result) {
+	    console.log(result.user)
+	})
+	
+    }
+}
